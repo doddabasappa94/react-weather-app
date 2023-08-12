@@ -29,11 +29,12 @@ pipeline {
             }
         }
         stage('git tag'){
-            steps
+            steps {
                script{
                   sh 'git tag weather-ui-${BUILD_NUMBER}'
                   sh 'git push --tags'
                } 
+            }
         }
     }
 }
