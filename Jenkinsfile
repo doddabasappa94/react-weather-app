@@ -24,6 +24,7 @@ pipeline {
                 script{
                     sh 'kubectl config set-context --current --namespace=${NAMESPACE}'
                     sh 'kubectl apply -f deploymentservice.yaml'
+                    sh 'kubectl get all'
                 }
             }
         }
