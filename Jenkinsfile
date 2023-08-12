@@ -33,7 +33,7 @@ pipeline {
                script{
                 withCredentials([usernamePassword(credentialsId: 'gurhubgi', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                   sh 'git tag weather-ui-${BUILD_NUMBER}'
-                  sh 'git push https://${USERNAME}:${PASSWORD}@github.com/doddabasappa94/react-weather-app.git --tags'
+                  sh 'git push --tags'
                } 
                }
             }
